@@ -52,3 +52,7 @@ $config['poller-wrapper']['alerter'] = FALSE;
 
 # Set default port association mode for new devices (default: ifIndex)
 #$config['default_port_association_mode'] = 'ifIndex';
+
+# Do not discover FDB tables per default
+$config['discovery_modules']['fdb'] = 0;
+
