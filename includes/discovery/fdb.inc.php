@@ -1,6 +1,6 @@
 <?php
 
-if ($device['network'] == 'network') {
+if ($device['type'] == 'network') {
     echo 'FDB table : ';
     echo("\n");
     $datas = shell_exec($config['snmpbulkwalk'].' -M '.$config['mibdir'].' -m BRIDGE-MIB -OqsX'.snmp_gen_auth($device).' '.$device['hostname'].' dot1dTpFdbPort');
